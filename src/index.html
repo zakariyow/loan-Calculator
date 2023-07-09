@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator | zakariyow</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="w-screen h-screen bg-slate-200 flex justify-center items-center px-40 py-20">
+    <!-- White background color center -->
+     <div class="bg-white w-full h-full flex justify-between p-24">
+        <!-- form section -->
+        <div id="form"  class="flex-1 pr-32 space-y-4">
+            <h2 class="mb-4 text-cyan-400 text-4xl font-bold">Loan Calculator</h2>
+
+            <!-- Loan Amount section -->
+            <div class="bg-slate-100 rounded-md flex items-center">
+                <i class="fa-solid fa-dollar-sign text-2xl ml-4"></i>
+                <input type="number" id="amount" class="placeholder:font-light bg-transparent w-full p-2 text-2xl
+                focus:outline-none " placeholder="Loan amount">
+            </div>
+
+            <!-- Loan Term Years Textfield -->
+            <div class="bg-slate-100 rounded-md flex items-center">
+                <i class="fa-solid fa-calendar text-2xl ml-4"></i>
+                <input type="number" id="year" class="placeholder:font-light bg-transparent w-full p-2 text-2xl
+                focus:outline-none " placeholder="Loan term in years">
+            </div>
+
+            <!-- Loan Term  Month Textfield -->
+            <div class="bg-slate-100 rounded-md flex items-center">
+                <i class="fa-sharp fa-regular fa-calendar-days text-2xl ml-4"></i>
+                <input type="number" id="month" class="placeholder:font-light bg-transparent w-full p-2 text-2xl
+                focus:outline-none " placeholder="Loan term in month " disabled>
+            </div>
+
+            <!-- Interest Paid Textfield -->
+            <div class="bg-slate-100 rounded-md flex items-center">
+                <i class="fa-solid fa-percent text-2xl ml-4"></i>
+                <input type="number" id="rate" class="placeholder:font-light bg-transparent w-full p-2 text-2xl
+                focus:outline-none " placeholder="interest paid">
+            </div>
+            <button id="btn-calc" class="bg-cyan-500 hover:bg-cyan-800 text-white w-1/2 py-2 rounded-lg">CALCULATE</button>
+        </div>
+
+        <!-- Result section -->
+        <div id="results" class="flex-1 flex flex-col justify-center items-start">
+             <h3 class="text-4xl text-slate-700">Monthly payments</h3>
+             <h2 id="month-paid" class="text-8xl font-bold text-slate-700">$24.974</h2>
+
+              <!-- Total principle paid paragraph -->
+             <div class="flex w-full justify-between pr-10">
+                <p>Total principle paid</p>
+                <p id="tpp">$9,000</p>
+             </div>
+
+             <div class="border w-full border-gray-400 my-3 "></div>
+             
+             <!-- Total interest paid paragraph -->
+             <div class="flex w-full justify-between pr-10">
+                <p>Total interest paid</p>
+                <p id="tip">$5,000</p>
+             </div>
+        </div>
+     </div>
+
+     <script src="/src/index.js"></script>
+</body>
+</html>
